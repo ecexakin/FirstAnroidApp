@@ -8,49 +8,101 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/scoreTextSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="163dp"
-        android:text="Second Fragment"
-        android:textSize="34sp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="177dp"
+        android:text="Score:0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/timeTextSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="35dp"
         android:text="Time : 5"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/scoreTextSecond"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTextSecond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Second Level"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/scoreTextSecond"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="143dp"
-        android:text="Score:0"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/timeTextSecond"
-        app:layout_constraintTop_toBottomOf="@+id/timeTextSecond" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="172dp"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="367dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="286dp"
-        android:onClick="increaseScore"
-        android:text="."
+        android:layout_marginBottom="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoreTextSecond" />
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextSecond">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

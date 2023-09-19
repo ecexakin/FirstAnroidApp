@@ -9,11 +9,15 @@ import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Random;
 
 
 public class FirstFragment extends Fragment {
@@ -24,6 +28,15 @@ public class FirstFragment extends Fragment {
     TextView scoreText;
 
     RestartActivity restartActivity;
+    ImageView imageView;
+    ImageView imageView2;
+    ImageView imageView3;
+    ImageView imageView4;
+
+    ImageView[] imageViews;
+
+    Handler handler;
+    Runnable runnable;
 
 
     public FirstFragment() {
@@ -49,11 +62,27 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         timeText = view.findViewById(R.id.timeText);
-        button = view.findViewById(R.id.button);
+        //button = view.findViewById(R.id.button);
         score=0;
         scoreText = view.findViewById(R.id.scoreText);
+        imageView = view.findViewById(R.id.imageView);
+        imageView2 = view.findViewById(R.id.imageView2);
+        imageView3 = view.findViewById(R.id.imageView3);
+        imageView4 = view.findViewById(R.id.imageView4);
 
 
+
+        imageViews = new ImageView[]{imageView,imageView2,imageView3,imageView4};
+
+        for (ImageView image : imageViews){
+            image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    increaseScore(view);
+                }
+            });
+        }
+        hideImages();
         new CountDownTimer(5000,1000){
 
             @Override
@@ -63,6 +92,8 @@ public class FirstFragment extends Fragment {
 
             @Override
             public void onFinish() {
+                timeText.setText("TIME OFF");
+                handler.removeCallbacks(runnable);
                 if (score>5){
                     NavDirections navDirections = FirstFragmentDirections.actionFirstFragmentToSecondFragment();
                     Navigation.findNavController(view).navigate(navDirections);
@@ -74,12 +105,6 @@ public class FirstFragment extends Fragment {
             }
         }.start();
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               increaseScore(view);
-            }
-        });
 
 
     }
@@ -87,6 +112,32 @@ public class FirstFragment extends Fragment {
         score++;
         scoreText.setText("Score : " + score);
     }
+    public void hideImages() {
+
+        handler = new Handler();
+
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+
+                for (ImageView image : imageViews) {
+                    image.setVisibility(View.INVISIBLE);
+
+                }
+
+                Random random = new Random();
+                int i = random.nextInt(4);
+                imageViews[i].setVisibility(View.VISIBLE);
+
+                handler.postDelayed(this,1000);
+
+            }
+        };
 
 
+        handler.post(runnable);
+
+
+
+    }
 }
