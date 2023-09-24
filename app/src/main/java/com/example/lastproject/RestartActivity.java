@@ -16,11 +16,13 @@ public class RestartActivity extends AppCompatActivity {
     Button restartButton;
     FirstFragment firstFragment;
     SecondFragment secondFragment;
+    Button homeButton;
 
     ThirdFragment thirdFragment;
     FourthFragment fourthFragment;
     FifthFragment fifthFragment;
     Fragment fragment;
+    HomeFragment homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +32,18 @@ public class RestartActivity extends AppCompatActivity {
         setContentView(view);
 
         restartButton = view.findViewById(R.id.restart);
-
+        homeButton = view.findViewById(R.id.homeButton);
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 restart(view,fragment);
+            }
+        });
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               home(view);
+
             }
         });
 
@@ -66,4 +75,11 @@ public class RestartActivity extends AppCompatActivity {
         }
 
     }
+
+    public void home(View view){
+        Intent intent = new Intent(this,HomeFragment.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

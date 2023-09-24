@@ -6,13 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".RestartActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/restartt" />
+
     <Button
         android:id="@+id/restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_width="237dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="228dp"
+        android:contentDescription="s"
+        android:background="#00FDF8F8"
         android:onClick="restart"
-        android:text="restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="237dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="320dp"
+        android:background="#00FDF8F8"
+        android:contentDescription="s"
+        android:onClick="home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

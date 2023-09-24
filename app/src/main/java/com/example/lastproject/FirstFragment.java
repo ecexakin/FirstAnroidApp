@@ -87,7 +87,7 @@ public class FirstFragment extends Fragment {
 
             @Override
             public void onTick(long millisUntilFinished) {
-                timeText.setText("Time : " + millisUntilFinished/1000);
+                timeText.setText(" " + millisUntilFinished/1000);
             }
 
             @Override
@@ -110,7 +110,7 @@ public class FirstFragment extends Fragment {
     }
     public void increaseScore(View view){
         score++;
-        scoreText.setText("Score : " + score);
+        scoreText.setText(" " + score);
     }
     public void hideImages() {
 
