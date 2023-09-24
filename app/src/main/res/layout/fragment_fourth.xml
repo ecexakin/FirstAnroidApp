@@ -6,24 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".FourthFragment">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="282dp"
-        android:text="Fourth Fragment"
-        android:textSize="30sp"
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="411dp"
+        android:layout_height="734dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/dorduncuarayuz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button4"
+    <TextView
+        android:id="@+id/timeTextFourth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="tikla"
-        android:text="Button"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/lalezar"
+        android:text="10"
+
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTextFourth"
+        android:layout_width="31dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="165dp"
+        android:fontFamily="@font/lalezar"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="229dp"
+        android:layout_height="258dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:contentDescription="s"
+            android:onClick="increaseScore"
+            android:src="@drawable/pear"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

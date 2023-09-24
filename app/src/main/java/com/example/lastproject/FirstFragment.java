@@ -22,12 +22,11 @@ import java.util.Random;
 
 public class FirstFragment extends Fragment {
 
-    Button button;
+
     int score;
     TextView timeText;
     TextView scoreText;
 
-    RestartActivity restartActivity;
     ImageView imageView;
     ImageView imageView2;
     ImageView imageView3;
