@@ -15,6 +15,26 @@
         <activity
             android:name=".RestartActivity"
             android:exported="false" />
+        <activity android:name=".HomeFragment"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".FirstFragment"
+            android:exported="true">
+
+        </activity><activity android:name=".SecondFragment"
+        android:exported="true">
+
+    </activity><activity android:name=".ThirdFragment"
+        android:exported="true">
+
+    </activity><activity android:name=".FourthFragment"
+        android:exported="true">
+
+    </activity><activity android:name=".FifthFragment"
+        android:exported="true">
+
+    </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

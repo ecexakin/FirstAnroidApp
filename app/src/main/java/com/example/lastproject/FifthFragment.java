@@ -76,7 +76,7 @@ public class FifthFragment extends Fragment {
                 }
             });
         }
-        new CountDownTimer(5000,1000){
+        new CountDownTimer(3000,1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -85,8 +85,14 @@ public class FifthFragment extends Fragment {
 
             @Override
             public void onFinish() {
-                NavDirections navDirections = FifthFragmentDirections.actionFifthFragmentToRestartActivity();
-                Navigation.findNavController(view).navigate(navDirections);
+                if (score>1){
+                    NavDirections navDirections = FifthFragmentDirections.actionFifthFragmentToFinishFragment();
+                    Navigation.findNavController(view).navigate(navDirections);
+                }
+                else {
+                    NavDirections navDirections = FifthFragmentDirections.actionFifthFragmentToRestartFragment();
+                    Navigation.findNavController(view).navigate(navDirections);
+                }
               }
         }.start();
     }

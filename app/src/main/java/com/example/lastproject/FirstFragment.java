@@ -82,7 +82,7 @@ public class FirstFragment extends Fragment {
             });
         }
         hideImages();
-        new CountDownTimer(5000,1000){
+        new CountDownTimer(3000,1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -93,12 +93,12 @@ public class FirstFragment extends Fragment {
             public void onFinish() {
                 timeText.setText("TIME OFF");
                 handler.removeCallbacks(runnable);
-                if (score>5){
+                if (score>1){
                     NavDirections navDirections = FirstFragmentDirections.actionFirstFragmentToSecondFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
                 else {
-                    NavDirections navDirections = FirstFragmentDirections.actionFirstFragmentToRestartActivity();
+                    NavDirections navDirections = FirstFragmentDirections.actionFirstFragmentToRestartFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
             }

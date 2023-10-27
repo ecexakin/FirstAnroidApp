@@ -90,23 +90,23 @@ public class ThirdFragment extends Fragment {
         }
         hideImages();
 
-        new CountDownTimer(10000,1000){
+        new CountDownTimer(3000,1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
-                timeTextThird.setText("Time : "+ millisUntilFinished/1000);
+                timeTextThird.setText(" "+ millisUntilFinished/1000);
             }
 
             @Override
             public void onFinish() {
                 timeTextThird.setText("Tıme Off");
                 handler.removeCallbacks(runnable);
-                if (score>6){
+                if (score>1){
                     NavDirections navDirections = ThirdFragmentDirections.actionThirdFragmentToFourthFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
                 else {
-                    NavDirections navDirections = ThirdFragmentDirections.actionThirdFragmentToRestartActivity();
+                    NavDirections navDirections = ThirdFragmentDirections.actionThirdFragmentToRestartFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
             }
@@ -115,7 +115,7 @@ public class ThirdFragment extends Fragment {
     }
     public void increaseScore(View view){
         score++;
-        scoreTextThird.setText("Score :" + score);
+        scoreTextThird.setText(" " + score);
     }
     public void hideImages() {
 

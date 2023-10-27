@@ -41,9 +41,8 @@ public class RestartActivity extends AppCompatActivity {
         });
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-               home(view);
-
+            public void onClick(View v) {
+               home(v);
             }
         });
 
@@ -76,9 +75,9 @@ public class RestartActivity extends AppCompatActivity {
 
     }
 
-    public void home(View view){
-        Intent intent = new Intent(this,HomeFragment.class);
-        startActivity(intent);
+    public void home(View v){
+        Intent intent2 = new Intent(this,HomeFragment.class);
+        startActivity(intent2);
         finish();
     }
 

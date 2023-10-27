@@ -79,7 +79,7 @@ public class FourthFragment extends Fragment {
             });
         }
         hideImages();
-        new CountDownTimer(5000,1000){
+        new CountDownTimer(3000,1000){
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -88,12 +88,12 @@ public class FourthFragment extends Fragment {
 
             @Override
             public void onFinish() {
-                if (score>5){
+                if (score>1){
                     NavDirections navDirections = FourthFragmentDirections.actionFourthFragmentToFifthFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
                 else {
-                    NavDirections navDirections = FourthFragmentDirections.actionFourthFragmentToRestartActivity();
+                    NavDirections navDirections = FourthFragmentDirections.actionFourthFragmentToRestartFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
             }

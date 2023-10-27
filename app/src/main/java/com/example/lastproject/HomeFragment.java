@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 NavDirections navDirections = HomeFragmentDirections.actionHomeFragmentToFirstFragment();
                 Navigation.findNavController(view).navigate(navDirections);
             }

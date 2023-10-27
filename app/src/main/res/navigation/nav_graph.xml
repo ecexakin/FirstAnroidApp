@@ -14,8 +14,8 @@
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
         <action
-            android:id="@+id/action_firstFragment_to_restartActivity"
-            app:destination="@id/restartActivity" />
+            android:id="@+id/action_firstFragment_to_restartFragment"
+            app:destination="@id/restartFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -23,28 +23,23 @@
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
-            android:id="@+id/action_secondFragment_to_restartActivity"
-            app:destination="@id/restartActivity" />
-        <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_restartFragment"
+            app:destination="@id/restartFragment" />
     </fragment>
-    <activity
-        android:id="@+id/restartActivity"
-        android:name="com.example.lastproject.RestartActivity"
-        android:label="activity_restart"
-        tools:layout="@layout/activity_restart" />
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.example.lastproject.ThirdFragment"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" >
         <action
-            android:id="@+id/action_thirdFragment_to_restartActivity"
-            app:destination="@id/restartActivity" />
-        <action
             android:id="@+id/action_thirdFragment_to_fourthFragment"
             app:destination="@id/fourthFragment" />
+        <action
+            android:id="@+id/action_thirdFragment_to_restartFragment"
+            app:destination="@id/restartFragment" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
@@ -52,11 +47,11 @@
         android:label="fragment_fourth"
         tools:layout="@layout/fragment_fourth" >
         <action
-            android:id="@+id/action_fourthFragment_to_restartActivity"
-            app:destination="@id/restartActivity" />
-        <action
             android:id="@+id/action_fourthFragment_to_fifthFragment"
             app:destination="@id/fifthFragment" />
+        <action
+            android:id="@+id/action_fourthFragment_to_restartFragment"
+            app:destination="@id/restartFragment" />
     </fragment>
     <fragment
         android:id="@+id/fifthFragment"
@@ -64,11 +59,14 @@
         android:label="fragment_fifth"
         tools:layout="@layout/fragment_fifth" >
         <action
-            android:id="@+id/action_fifthFragment_to_restartActivity"
-            app:destination="@id/restartActivity" />
+            android:id="@+id/action_fifthFragment_to_restartFragment"
+            app:destination="@id/restartFragment" />
         <action
             android:id="@+id/action_fifthFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_fifthFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -79,4 +77,36 @@
             android:id="@+id/action_homeFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/restartFragment"
+        android:name="com.example.lastproject.RestartFragment"
+        android:label="fragment_restart"
+        tools:layout="@layout/fragment_restart" >
+        <action
+            android:id="@+id/action_restartFragment_self"
+            app:destination="@id/restartFragment" />
+        <action
+            android:id="@+id/action_restartFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_restartFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_restartFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_restartFragment_to_fourthFragment"
+            app:destination="@id/fourthFragment" />
+        <action
+            android:id="@+id/action_restartFragment_to_fifthFragment"
+            app:destination="@id/fifthFragment" />
+        <action
+            android:id="@+id/action_restartFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.example.lastproject.FinishFragment"
+        android:label="fragment_finish"
+        tools:layout="@layout/fragment_finish" />
 </navigation>

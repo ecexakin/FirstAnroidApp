@@ -10,8 +10,13 @@
         android:id="@+id/imageView20"
         android:layout_width="414dp"
         android:layout_height="730dp"
+        android:layout_marginBottom="1dp"
         android:src="@drawable/ikinciarayuz"
         app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_row="0" />
 
 
@@ -19,30 +24,39 @@
         android:id="@+id/scoreTextSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="165dp"
         android:fontFamily="@font/lalezar"
         android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/timeTextSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/lalezar"
         android:text="10"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout2"
         android:layout_width="248dp"
         android:layout_height="243dp"
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="372dp">
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="115dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/imageView5"

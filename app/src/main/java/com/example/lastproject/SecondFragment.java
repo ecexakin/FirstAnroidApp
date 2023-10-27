@@ -80,10 +80,10 @@ public class SecondFragment extends Fragment {
         hideImages();
 
 
-        new CountDownTimer(8000,1000){
+        new CountDownTimer(3000,1000){
             @Override
             public void onTick(long millisUntilFinished) {
-                timeTextSecond.setText("Tıme : " + millisUntilFinished/1000);
+                timeTextSecond.setText(" " + millisUntilFinished/1000);
             }
 
             @Override
@@ -91,12 +91,12 @@ public class SecondFragment extends Fragment {
                 timeTextSecond.setText("TIME OFF");
                 handler.removeCallbacks(runnable);
 
-                if (score>3){
+                if (score>1){
                     NavDirections navDirections = SecondFragmentDirections.actionSecondFragmentToThirdFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
                 else {
-                    NavDirections navDirections = SecondFragmentDirections.actionSecondFragmentToRestartActivity();
+                    NavDirections navDirections =SecondFragmentDirections.actionSecondFragmentToRestartFragment();
                     Navigation.findNavController(view).navigate(navDirections);
                 }
             }
@@ -107,7 +107,7 @@ public class SecondFragment extends Fragment {
     }
     public void increaseScore(View view){
         score++;
-        scoreTextSecond.setText("Score" + score);
+        scoreTextSecond.setText("" + score);
     }
     public void hideImages() {
 
